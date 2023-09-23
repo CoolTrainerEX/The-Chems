@@ -7,7 +7,7 @@ for i in range(1, 2):
     f = open("file" + str(i) + ".out")
 
     #find data
-    for line_num, line in enumerate(f):
+    for line in f:
         if "FINAL R-B3LYP ENERGY" in line:
             final_rb3lyp_energy = float(line[30:44])
             average_CH_bond_length = 0
