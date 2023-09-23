@@ -45,4 +45,4 @@ if len(formulas) == 0:
     print("There are no possible formulas")
 else:
     for f in formulas:
-        print("Al", checkIfOne(f["al"]), "O", checkIfOne(f["o"]), "(CH3)", checkIfOne(f["ch3"]), sep="")
+        print("Al" + checkIfOne(f["al"]) + "O" + checkIfOne(f["o"]) + "(CH3)" + checkIfOne(f["ch3"]))
