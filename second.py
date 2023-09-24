@@ -3,7 +3,7 @@ import math
 results = []
 
 #open file
-for i in range(1, 2):
+for i in range(1, 6):
     with open("file" + str(i) + ".out") as f:
         #find data
         average_CH_bond_length = 0.0
