@@ -2,7 +2,7 @@ import math
 
 results = [{"time": "Time", "ratio": "Peak A / Peak B"}]
 
-for i in range(7, 8):
+for i in range(7, 29):
     with open("spa" + "0" * (5 - len(str(i))) + str(i) + ".txt") as f:
         time = float(f.readline())
         wavenumber = []
