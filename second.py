@@ -9,15 +9,17 @@ for i in range(1, 2):
         average_CH_bond_length = 0.0
         count = 0
         for line in f:
-            if "INTERNUCLEAR DISTANCES" in line or count > 0:
+            if "INTERNUCLEAR DISTANCES" in line:
                 count += 1
                 pair = True
-            elif count == 6:
+            elif count == 5:
                 for i in line[26:74].split(" *  "):
-                    average_CH_bond_length += float[i]
+                    average_CH_bond_length += float(i)
                 
                 average_CH_bond_length /= 4
                 count = 0
+            elif count > 0:
+                count += 1
             elif "FINAL R-B3LYP ENERGY" in line and pair == True:
                 results.append({"final_rb3lyp_energy": float(line[30:44]), "average_CH_bond_length": average_CH_bond_length})
                 average_CH_bond_length = 0.0
